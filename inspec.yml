@@ -1,0 +1,8 @@
+name: sa2017-compliance
+title: My Compliance
+maintainer: Matt Stratton
+copyright: Matt Stratton
+copyright_email: matt.stratton@gmail.com
+license: Apache-2.0
+summary: An InSpec Compliance Profile
+version: 0.1.0
