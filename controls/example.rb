@@ -1,19 +1,14 @@
 # encoding: utf-8
 # copyright: 2017, Matt Stratton
 
-title 'sample section'
+title 'Directory Tests'
 
-# you can also use plain tests
-describe file('/tmp') do
-  it { should be_directory }
-end
-
-# you add controls here
-control 'tmp-1.0' do                        # A unique ID for this control
-  impact 0.7                                # The criticality, if this control fails.
-  title 'Create /tmp directory'             # A human-readable title
-  desc 'An optional description...'
-  describe file('/tmp') do                  # The actual test
+control 'log-1.0' do                        
+  impact 0.7                                
+  title 'Ownership of /var/log'             
+  desc 'The /var/log directory should be owned by root'
+  describe file('/tmp') do
     it { should be_directory }
+    it { should be_owned_by 'root' }
   end
 end
