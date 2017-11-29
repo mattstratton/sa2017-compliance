@@ -7,7 +7,7 @@ control 'log-1.0' do
   impact 0.7                                
   title 'Ownership of /var/log'             
   desc 'The /var/log directory should be owned by root'
-  describe file('/tmp') do
+  describe file('/var/log') do
     it { should be_directory }
     it { should be_owned_by 'root' }
   end
